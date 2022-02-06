@@ -16,14 +16,14 @@
 
 package com.dlsc.workbenchfx.demo.modules.gantt;
 
-import com.flexganttfx.model.Layer;
+/*import com.flexganttfx.model.Layer;
 import com.flexganttfx.model.Row;
 import com.flexganttfx.model.activity.MutableActivityBase;
 import com.flexganttfx.model.layout.GanttLayout;
 import com.flexganttfx.view.GanttChart;
 import com.flexganttfx.view.graphics.GraphicsBase;
 import com.flexganttfx.view.graphics.renderer.ActivityBarRenderer;
-import com.flexganttfx.view.timeline.Timeline;
+import com.flexganttfx.view.timeline.Timeline; */
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -52,28 +52,28 @@ public class GanttView extends StackPane {
    * bar in the graphics view of the Gantt chart. The flight is mutable, so
    * the user will be able to interact with it.
    */
-  class Flight extends MutableActivityBase<FlightData> {
-    public Flight(FlightData data) {
+  /*class Flight extends MutableActivityBase<FlightData> {
+   public Flight(FlightData data) {
       setUserObject(data);
       setName(data.flightNo);
       setStartTime(data.departureTime);
       setEndTime(data.arrivalTime);
     }
-  }
+  }*/
 
   /*
    * Each row represents an aircraft in this example. The activities shown on
    * the row are of type Flight.
    */
-  class Aircraft extends Row<Aircraft, Aircraft, Flight> {
+  /*class Aircraft extends Row<Aircraft, Aircraft, Flight> {
     public Aircraft(String name) {
       super(name);
     }
-  }
+  }*/
 
   public GanttView() {
     // Create the Gantt chart
-    GanttChart<Aircraft> gantt = new GanttChart<Aircraft>(new Aircraft(
+  /*  GanttChart<Aircraft> gantt = new GanttChart<Aircraft>(new Aircraft(
         "ROOT"));
 
     Layer layer = new Layer("Flights");
@@ -99,7 +99,8 @@ public class GanttView extends StackPane {
         new ActivityBarRenderer<>(graphics, "Flight Renderer"));
     graphics.showEarliestActivities();
 
-    getChildren().addAll(gantt);
+    getChildren().addAll(gantt); */
   }
+
 
 }
